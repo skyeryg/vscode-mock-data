@@ -1,8 +1,8 @@
 {
   "publisher": "skyeryg",
   "name": "vscode-mock-data",
-  "displayName": "vscode-mock-data",
-  "version": "0.0.0",
+  "displayName": "Vscode Mock Data",
+  "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@7.8.0",
   "description": "",
@@ -24,7 +24,7 @@
     "Other"
   ],
   "main": "./dist/index.js",
-  "icon": "res/icon.png",
+  "icon": "resources/logo.png",
   "files": [
     "dist"
   ],
