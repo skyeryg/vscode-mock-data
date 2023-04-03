@@ -1,0 +1,67 @@
+{
+  "publisher": "skyeryg",
+  "name": "vscode-mock-data",
+  "displayName": "vscode-mock-data",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@7.8.0",
+  "description": "",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/skyeryg",
+  "homepage": "https://github.com/skyeryg/vscode-mock-data#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skyeryg/vscode-mock-data"
+  },
+  "bugs": {
+    "url": "https://github.com/skyeryg/vscode-mock-data/issues"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/skyeryg"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/index.js",
+  "icon": "res/icon.png",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --external vscode",
+    "dev": "nr build --watch",
+    "lint": "eslint .",
+    "vscode:prepublish": "nr build",
+    "publish": "vsce publish --no-dependencies",
+    "pack": "vsce package --no-dependencies",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && nr publish"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.25.2",
+    "@antfu/ni": "^0.17.2",
+    "@types/node": "^18.6.4",
+    "@types/vscode": "^1.69.0",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.21.0",
+    "esno": "^0.16.3",
+    "pnpm": "^7.8.0",
+    "rimraf": "^3.0.2",
+    "tsup": "^6.2.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.4",
+    "vitest": "^0.21.0",
+    "vsce": "^2.10.0"
+  },
+  "dependencies": {
+    "mockjs": "^1.1.0"
+  }
+}
