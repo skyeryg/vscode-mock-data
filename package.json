@@ -32,8 +32,23 @@
     "vscode": "^1.69.0"
   },
   "activationEvents": [
-    "onStartupFinished"
+    "onCommand:vscode-mock-data.insert",
+    "onCommand:vscode-mock-data.generate"
   ],
+  "contributes": {
+    "commands": [
+      {
+        "category": "Mock Data",
+        "command": "vscode-mock-data.insert",
+        "title": "Insert mock data ..."
+      },
+      {
+        "category": "Mock Data",
+        "command": "vscode-mock-data.generate",
+        "title": "Generate mock data from select schema..."
+      }
+    ]
+  },
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
     "dev": "nr build --watch",
@@ -48,6 +63,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
     "@antfu/ni": "^0.17.2",
+    "@types/mockjs": "^1.0.7",
     "@types/node": "^18.6.4",
     "@types/vscode": "^1.69.0",
     "bumpp": "^8.2.1",
