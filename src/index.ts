@@ -24,7 +24,8 @@ export function activate(context: ExtensionContext) {
     if (!selectedText)
       return
 
-    const data = mock(JSON.parse(selectedText))
+    const template = JSON.parse(selectedText.replaceAll('\'', '"').replace(/([^"\s]+):/g, '"$1":'))
+    const data = mock(template)
     const text = JSON.stringify(data, undefined, 2).replace(/"([^"]+)":/g, '$1:')
 
     insertData(text)
