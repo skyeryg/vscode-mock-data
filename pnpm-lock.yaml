@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      dayjs:
+        specifier: ^1.11.13
+        version: 1.11.13
       json5:
         specifier: ^2.2.3
         version: 2.2.3
@@ -468,6 +471,9 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
+
+  dayjs@1.11.13:
+    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -2693,6 +2699,8 @@ snapshots:
   css-what@5.1.0: {}
 
   cssesc@3.0.0: {}
+
+  dayjs@1.11.13: {}
 
   debug@2.6.9:
     dependencies:
