@@ -4,4 +4,4 @@
 
 ## License
 
-[MIT](./LICENSE) License © 2022 [Anthony Fu](https://github.com/skyeryg)
+[MIT](./LICENSE) License © 2022 [Skyer](https://github.com/skyeryg)

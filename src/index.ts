@@ -1,6 +1,7 @@
 import type { ExtensionContext } from 'vscode'
 import { commands, window } from 'vscode'
 import { Random, mock } from 'mockjs'
+import json5 from 'json5'
 import { entity } from './entity'
 import { insertData } from './utils'
 
@@ -24,9 +25,9 @@ export function activate(context: ExtensionContext) {
     if (!selectedText)
       return
 
-    const template = JSON.parse(selectedText.replaceAll('\'', '"').replace(/([^"\s]+):/g, '"$1":'))
+    const template = json5.parse(selectedText)
     const data = mock(template)
-    const text = JSON.stringify(data, undefined, 2).replace(/"([^"]+)":/g, '$1:')
+    const text = json5.stringify(data, undefined, 2) // .replace(/"([^"]+)":/g, '$1:')
 
     insertData(text)
   }))

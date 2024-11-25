@@ -6,7 +6,7 @@
   "private": true,
   "packageManager": "pnpm@7.8.0",
   "description": "",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "skyer <yang.skyer@qq.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/skyeryg",
   "homepage": "https://github.com/skyeryg/vscode-mock-data#readme",
@@ -60,6 +60,10 @@
     "typecheck": "tsc --noEmit",
     "release": "bumpp && nr publish"
   },
+  "dependencies": {
+    "json5": "^2.2.3",
+    "mockjs": "^1.1.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
     "@antfu/ni": "^0.17.2",
@@ -76,8 +80,5 @@
     "vite": "^3.0.4",
     "vitest": "^0.21.0",
     "vsce": "^2.10.0"
-  },
-  "dependencies": {
-    "mockjs": "^1.1.0"
   }
 }
