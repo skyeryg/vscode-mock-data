@@ -60,37 +60,37 @@ export const entity: Entity = {
   },
   dateBetween: {
     args: {
-      end: {
-        default: '@dayjs().add(10, \'day\').format(\'YYYY-MM-DD HH:mm:ss\')',
-        description: '结束时间',
-      },
-      format: '时间格式',
       start: {
         default: '@dayjs().format(\'YYYY-MM-DD HH:mm:ss\')',
         description: '开始时间',
+      },
+      end: {
+        default: '@dayjs().add(10, \'day\').format(\'YYYY-MM-DD HH:mm:ss\')',
+        description: '结束时间',
       },
       unit: {
         default: 'day',
         description: '单位 - 可选 year, month, week, day, hour, minute, second ',
       },
+      format: '时间格式 - YYYY-MM-DD HH:mm:ss',
     },
     description: '根据开始时间和结束时间生成一个时间序列',
   },
   dateRange: {
     args: {
-      format: '时间格式',
-      length: {
-        default: 10,
-        description: '长度',
-      },
       start: {
         default: '@dayjs().format(\'YYYY-MM-DD HH:mm:ss\')',
         description: '开始时间',
+      },
+      length: {
+        default: 10,
+        description: '长度',
       },
       unit: {
         default: 'day',
         description: '单位 - 可选 year, month, week, day, hour, minute, second ',
       },
+      format: '时间格式 - YYYY-MM-DD HH:mm:ss',
     },
     description: '根据开始时间和长度生成一个时间序列',
   },
